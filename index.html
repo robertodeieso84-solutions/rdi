@@ -1,235 +1,94 @@
-<!DOCTYPE html>
-<html lang="it">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Roberto De Ieso | Project Manager SAP</title>
-
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
-
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Inter', sans-serif;
-      color: #1a1a1a;
-      background: #ffffff;
-      scroll-behavior: smooth;
-    }
-
-    /* NAVBAR */
-    nav {
-      position: sticky;
-      top: 0;
-      background: rgba(255,255,255,0.9);
-      backdrop-filter: blur(10px);
-      border-bottom: 1px solid #eee;
-      padding: 15px 30px;
-      display: flex;
-      justify-content: space-between;
-      z-index: 1000;
-    }
-
-    nav a {
-      margin-left: 20px;
-      text-decoration: none;
-      color: #333;
-      font-weight: 500;
-    }
-
-    nav a:hover {
-      color: #0a66c2;
-    }
-
-    /* HERO */
-    header {
-      text-align: center;
-      padding: 120px 20px;
-      animation: fadeUp 1s ease;
-    }
-
-    header h1 {
-      font-size: 3em;
-      margin: 0;
-    }
-
-    header p {
-      color: #555;
-      margin-top: 10px;
-      font-size: 1.2em;
-    }
-
-    section {
-      max-width: 900px;
-      margin: auto;
-      padding: 80px 20px;
-      opacity: 0;
-      transform: translateY(40px);
-      transition: all 1s ease;
-    }
-
-    section.show {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    h2 {
-      font-size: 2em;
-      margin-bottom: 20px;
-    }
-
-    .card {
-      background: #f9fafb;
-      padding: 20px;
-      margin: 25px 0;
-      border-left: 4px solid #0a66c2;
-      transition: 0.3s;
-    }
-
-    .card:hover {
-      transform: translateY(-3px);
-    }
-
-    .highlight {
-      color: #0a66c2;
-      font-weight: 600;
-    }
-
-    /* CTA */
-    .cta {
-      display: inline-block;
-      margin-top: 20px;
-      padding: 14px 22px;
-      background: #0a66c2;
-      color: white;
-      border-radius: 8px;
-    }
-
-    /* Floating button */
-    .call-btn {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background: #0a66c2;
-      color: white;
-      padding: 14px 18px;
-      border-radius: 50px;
-      box-shadow: 0 5px 20px rgba(0,0,0,0.2);
-    }
-
-    footer {
-      text-align: center;
-      padding: 40px;
-      border-top: 1px solid #eee;
-    }
-
-    @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(30px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-  </style>
-</head>
-
-<body>
-
 <!-- NAV -->
 <nav>
   <div><strong>Roberto De Ieso</strong></div>
   <div>
     <a href="#profilo">Profilo</a>
     <a href="#progetti">Progetti</a>
-    <a href="#metodo">Metodo</a>
+    <a href="#metodo">Il mio lavoro</a>
+    <a href="#certificazioni">Certificazioni</a>
     <a href="#contatti">Contatti</a>
   </div>
 </nav>
 
-<!-- HERO -->
-<header>
-  <h1>Project Manager SAP</h1>
-  <p>Technical background | Delivery | Business alignment</p>
-</header>
-
-<section id="profilo" class="fade">
-  <h2>Profilo</h2>
-  <p>
-    Project Manager con background tecnico SAP ABAP, con esperienza nella gestione
-    di progetti IT complessi in contesti enterprise.
-  </p>
-  <p>
-    Approccio orientato a <span class="highlight">risultati concreti, qualità e delivery</span>,
-    con forte integrazione tra business e tecnologia.
-  </p>
-</section>
-
-<section id="progetti" class="fade">
-  <h2>Progetti chiave</h2>
-
-  <div class="card">
-    <h3>Progetto SAP core</h3>
-    <p>Gestione completa delivery, budget e team cross-funzionali.</p>
-  </div>
-
-  <div class="card">
-    <h3>Workzone</h3>
-    <p>Coordinamento tecnico e funzionale con gestione rischi e priorità.</p>
-  </div>
-
-  <div class="card">
-    <h3>Soluzioni multi-modulo</h3>
-    <p>Implementazione SAP HR, FI, MM, PM con ottimizzazione processi.</p>
-  </div>
-
-</section>
-
+<!-- SEZIONE IL MIO LAVORO -->
 <section id="metodo" class="fade">
-  <h2>Come lavoro</h2>
+  <h2>Il mio lavoro</h2>
 
   <div class="card">
-    <p><span class="highlight">Struttura</span> — pianificazione chiara e controllo continuo.</p>
+    <p>
+      Il mio ruolo è garantire la riuscita di progetti IT complessi, integrando
+      competenze tecniche e capacità di governance. Opero come punto di raccordo
+      tra business e tecnologia, assicurando soluzioni scalabili, sostenibili e
+      allineate agli obiettivi aziendali.
+    </p>
   </div>
 
   <div class="card">
-    <p><span class="highlight">Allineamento</span> — comunicazione costante con stakeholder.</p>
+    <p>
+      Coordino team cross-funzionali e governo l’intero ciclo di delivery:
+      dalla raccolta requisiti fino al rilascio in produzione, con attenzione
+      a qualità, performance e gestione del rischio.
+    </p>
   </div>
 
   <div class="card">
-    <p><span class="highlight">Delivery</span> — focus su risultati concreti e misurabili.</p>
+    <p>
+      Il background tecnico mi consente di entrare nel merito delle soluzioni,
+      supportare decisioni architetturali e prevenire criticità, mantenendo un
+      equilibrio concreto tra esigenze progettuali e vincoli tecnologici.
+    </p>
+  </div>
+</section>
+
+<!-- SEZIONE CERTIFICAZIONI -->
+<section id="certificazioni" class="fade">
+  <h2>Certificazioni</h2>
+
+  <div class="card">
+    <p><strong>SAP Certified – SAP Fiori Application Developer</strong></p>
+    <p>Competenze: Fiori, OData</p>
+  </div>
+
+  <div class="card">
+    <p><strong>SAP Certified – Integration Developer</strong></p>
+    <p>Competenze: API Management</p>
+  </div>
+
+  <div class="card">
+    <p><strong>SAP Certified – Backend Developer (CAP Model)</strong></p>
+  </div>
+
+  <div class="card">
+    <p><strong>SAP Certified – Back-End Developer ABAP Cloud</strong></p>
+    <p>Competenze: RAP, SAP S/4HANA</p>
+  </div>
+
+  <div class="card">
+    <p><strong>ITIL Foundation Certification</strong></p>
+  </div>
+
+  <div class="card">
+    <p><strong>LSI 101 GNU/Linux</strong></p>
   </div>
 
 </section>
 
+<!-- CONTATTI (AGGIORNATI) -->
 <section id="contatti" class="fade">
   <h2>Contatti</h2>
   <p>📱 331 7330979</p>
+
   <p>
     👉 <a href="https://www.linkedin.com/in/roberto-de-ieso-41657713/" target="_blank">
       LinkedIn
     </a>
   </p>
 
+  <p>
+    🎓 <a href="https://www.credly.com/users/INSERISCI-LINK" target="_blank">
+      Credly
+    </a>
+  </p>
+
   <a href="tel:3317330979" class="cta">Chiama ora</a>
 </section>
-
-<footer>
-  <p>© 2026 Roberto De Ieso</p>
-</footer>
-
-<a href="tel:3317330979" class="call-btn">📞</a>
-
-<script>
-  const sections = document.querySelectorAll("section");
-
-  window.addEventListener("scroll", () => {
-    const trigger = window.innerHeight * 0.85;
-
-    sections.forEach(sec => {
-      const top = sec.getBoundingClientRect().top;
-      if (top < trigger) {
-        sec.classList.add("show");
-      }
-    });
-  });
-</script>
-
-</body>
-</html>
