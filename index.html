@@ -1,129 +1,295 @@
 <!DOCTYPE html>
-<html lang="it">
+<html lang="en" data-lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta property="og:title" content="Roberto De Ieso | Project Manager SAP">
-  <meta property="og:description" content="Project Manager SAP con focus su delivery, governance e allineamento business-IT.">
-  <meta property="og:image" content="https://robedeieso84-solutions.github.io/rdi/preview.png">
-  <meta property="og:url" content="https://robedeieso84-solutions.github.io/rdi/">
-  <meta property="og:type" content="website">
-  
-  <title>Roberto De Ieso | Project Manager SAP</title>
+  <title>Roberto De Ieso | SAP Enterprise &amp; Solution Architect</title>
+  <meta name="description" content="SAP Enterprise &amp; Solution Architect: clean core, SAP BTP, ABAP Cloud, RAP, Fiori and integration. 7+ years on large-scale SAP projects.">
+  <link rel="canonical" href="https://robertodeieso84-solutions.github.io/rdi/">
+  <meta name="theme-color" content="#0a66c2">
 
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Roberto De Ieso">
+  <meta property="og:title" content="Roberto De Ieso | SAP Enterprise &amp; Solution Architect">
+  <meta property="og:description" content="Clean Core · SAP BTP · ABAP Cloud · RAP · Fiori · Integration. 7+ years on large-scale SAP projects.">
+  <meta property="og:url" content="https://robertodeieso84-solutions.github.io/rdi/">
+  <meta property="og:image" content="https://robertodeieso84-solutions.github.io/rdi/preview.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Roberto De Ieso, SAP Enterprise &amp; Solution Architect">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:locale:alternate" content="it_IT">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230a66c2'/%3E%3Ctext x='32' y='42' font-family='Arial,sans-serif' font-size='28' font-weight='700' fill='white' text-anchor='middle'%3ERD%3C/text%3E%3C/svg%3E">
+
+  <script>
+    (function () {
+      var root = document.documentElement;
+      root.classList.add('js');
+      var lang = null;
+      try { lang = localStorage.getItem('lang'); } catch (e) {}
+      if (lang !== 'it' && lang !== 'en') {
+        lang = (navigator.language || '').toLowerCase().indexOf('it') === 0 ? 'it' : 'en';
+      }
+      root.setAttribute('data-lang', lang);
+      root.setAttribute('lang', lang);
+    })();
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <style>
+    :root {
+      --ink: #16181d;
+      --text: #2b2f36;
+      --muted: #5b6270;
+      --line: #e7e9ee;
+      --soft: #f6f8fb;
+      --accent: #0a66c2;
+      --accent-dark: #084e96;
+      --accent-soft: #e8f1fb;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; scroll-padding-top: 72px; }
+
     body {
       margin: 0;
-      font-family: 'Inter', sans-serif;
-      color: #1a1a1a;
+      font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+      color: var(--ink);
       background: #ffffff;
-      scroll-behavior: smooth;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
     }
+
+    /* Language switch: show only the active language */
+    html[data-lang="en"] [data-l="it"],
+    html[data-lang="it"] [data-l="en"] { display: none !important; }
+
+    a { color: var(--accent); }
 
     nav {
       position: sticky;
       top: 0;
-      background: rgba(255,255,255,0.9);
-      backdrop-filter: blur(10px);
-      border-bottom: 1px solid #eee;
-      padding: 15px 30px;
+      z-index: 100;
       display: flex;
+      align-items: center;
       justify-content: space-between;
-      z-index: 1000;
+      gap: 16px;
+      padding: 14px 28px;
+      background: rgba(255, 255, 255, 0.92);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--line);
     }
 
-    nav a {
-      margin-left: 20px;
+    .brand {
+      font-weight: 700;
+      color: var(--ink);
       text-decoration: none;
+      white-space: nowrap;
+    }
+
+    .nav-links { display: flex; align-items: center; gap: 22px; }
+
+    .nav-links a {
       color: #333;
+      text-decoration: none;
       font-weight: 500;
+      font-size: 0.95rem;
     }
 
-    nav a:hover {
-      color: #0a66c2;
+    .nav-links a:hover { color: var(--accent); }
+
+    .lang {
+      display: inline-flex;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 2px;
+      margin-left: 6px;
     }
 
-    header {
-      text-align: center;
-      padding: 120px 20px;
+    .lang button {
+      border: 0;
+      background: transparent;
+      font: inherit;
+      font-size: 0.8rem;
+      font-weight: 600;
+      padding: 4px 10px;
+      border-radius: 999px;
+      cursor: pointer;
+      color: var(--muted);
     }
 
-    header h1 {
-      font-size: 3em;
-      margin: 0;
+    .lang button[aria-pressed="true"] { background: var(--accent); color: #ffffff; }
+
+    .hero { text-align: center; padding: 110px 20px 90px; }
+
+    .kicker {
+      display: inline-block;
+      color: var(--accent);
+      background: var(--accent-soft);
+      font-weight: 600;
+      font-size: 0.9rem;
+      padding: 6px 14px;
+      border-radius: 999px;
     }
 
-    header p {
-      color: #555;
-      margin-top: 15px;
-      font-size: 1.2em;
-      max-width: 600px;
-      margin-left: auto;
-      margin-right: auto;
+    .kicker span { white-space: nowrap; }
+
+    .hero h1 {
+      font-size: clamp(2.1rem, 5vw, 3.2rem);
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+      margin: 22px 0 0;
     }
 
-    section {
-      max-width: 900px;
-      margin: auto;
-      padding: 80px 20px;
-      opacity: 0;
-      transform: translateY(40px);
-      transition: all 1s ease;
+    .hero .lead {
+      color: var(--muted);
+      font-size: 1.2rem;
+      max-width: 640px;
+      margin: 18px auto 0;
     }
 
-    section.show {
-      opacity: 1;
-      transform: translateY(0);
+    .actions {
+      margin-top: 32px;
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+      flex-wrap: wrap;
     }
 
-    h2 {
-      font-size: 2em;
-      margin-bottom: 20px;
+    .btn {
+      display: inline-block;
+      padding: 13px 22px;
+      border-radius: 8px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: background 0.2s, border-color 0.2s, color 0.2s;
+    }
+
+    .btn.primary { background: var(--accent); color: #ffffff; }
+    .btn.primary:hover { background: var(--accent-dark); }
+    .btn.secondary { border: 1px solid var(--line); color: var(--ink); }
+    .btn.secondary:hover { border-color: var(--accent); color: var(--accent); }
+
+    section { max-width: 900px; margin: 0 auto; padding: 70px 20px; }
+
+    h2 { font-size: 1.9rem; letter-spacing: -0.01em; margin: 0 0 22px; }
+
+    section > p { font-size: 1.08rem; color: var(--text); }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 18px;
     }
 
     .card {
-      background: #f9fafb;
-      padding: 20px;
-      margin: 25px 0;
-      border-left: 4px solid #0a66c2;
-      transition: 0.3s;
+      background: var(--soft);
+      padding: 20px 22px;
+      border-left: 4px solid var(--accent);
+      border-radius: 4px;
+      transition: transform 0.3s;
     }
 
-    .card:hover {
-      transform: translateY(-3px);
+    .card:hover { transform: translateY(-3px); }
+    .card h3 { margin: 0 0 6px; font-size: 1.05rem; }
+    .card p { margin: 0; color: var(--muted); }
+
+    .role { padding: 24px 0; border-top: 1px solid var(--line); }
+    .role.first { border-top: 0; padding-top: 0; }
+    .role h3 { margin: 0; font-size: 1.15rem; }
+    .meta { color: var(--muted); font-size: 0.95rem; margin: 2px 0 10px; }
+    .role ul { margin: 8px 0 0; padding-left: 20px; color: var(--text); }
+    .role li { margin: 5px 0; }
+
+    .certs {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+      gap: 12px;
     }
 
-    .highlight {
-      color: #0a66c2;
-      font-weight: 600;
+    .cert {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 14px;
+      background: var(--soft);
+      border-radius: 6px;
+      padding: 14px 16px;
     }
 
-    .cta {
-      display: inline-block;
-      margin-top: 20px;
-      padding: 14px 22px;
-      background: #0a66c2;
-      color: white;
-      border-radius: 8px;
+    .cert span { font-weight: 600; }
+    .cert time { color: var(--muted); font-size: 0.9rem; white-space: nowrap; }
+
+    .more { margin-top: 20px; }
+    .more a { font-weight: 600; text-decoration: none; }
+    .more a:hover { text-decoration: underline; }
+
+    .contact-list {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 28px;
+      display: grid;
+      gap: 10px;
     }
 
-    .call-btn {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background: #0a66c2;
-      color: white;
-      padding: 14px 18px;
-      border-radius: 50px;
-      box-shadow: 0 5px 20px rgba(0,0,0,0.2);
-    }
+    .contact-list li { display: flex; gap: 14px; flex-wrap: wrap; }
+    .contact-list .label { min-width: 90px; color: var(--muted); }
+    .contact-list a { overflow-wrap: anywhere; }
 
     footer {
       text-align: center;
-      padding: 40px;
-      border-top: 1px solid #eee;
+      padding: 36px 20px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .call-btn { display: none; }
+
+    /* Reveal on scroll (only when JavaScript is available) */
+    .js .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+
+    .js .reveal.show { opacity: 1; transform: none; }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      .js .reveal { opacity: 1; transform: none; transition: none; }
+      .card { transition: none; }
+    }
+
+    @media (max-width: 760px) {
+      nav { padding: 12px 16px; }
+      .nav-links { gap: 0; }
+      .nav-links a { display: none; }
+      .hero { padding: 72px 16px 56px; }
+      .kicker { border-radius: 18px; }
+      section { padding: 52px 16px; }
+      .contact-list li { flex-direction: column; gap: 0; }
+      .contact-list .label { min-width: 0; font-size: 0.85rem; }
+
+      .call-btn {
+        display: flex;
+        position: fixed;
+        bottom: 18px;
+        right: 18px;
+        background: var(--accent);
+        color: #ffffff;
+        text-decoration: none;
+        padding: 14px 18px;
+        border-radius: 50px;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+      }
     }
   </style>
 </head>
@@ -131,153 +297,219 @@
 <body>
 
 <nav>
-  <div><strong>Roberto De Ieso</strong></div>
-  <div>
-    <a href="#profilo">Profilo</a>
-    <a href="#progetti">Progetti</a>
-    <a href="#metodo">Il mio lavoro</a>
-    <a href="#valore">Valore</a>
-    <a href="#certificazioni">Certificazioni</a>
-    <a href="#contatti">Contatti</a>
+  <a class="brand" href="#top">Roberto De Ieso</a>
+  <div class="nav-links">
+    <a href="#about"><span data-l="en">About</span><span data-l="it">Profilo</span></a>
+    <a href="#focus"><span data-l="en">Focus</span><span data-l="it">Ambiti</span></a>
+    <a href="#experience"><span data-l="en">Experience</span><span data-l="it">Esperienza</span></a>
+    <a href="#certifications"><span data-l="en">Certifications</span><span data-l="it">Certificazioni</span></a>
+    <a href="#contact"><span data-l="en">Contact</span><span data-l="it">Contatti</span></a>
+    <div class="lang" role="group" aria-label="Language / Lingua">
+      <button type="button" data-set="it" aria-pressed="false">IT</button>
+      <button type="button" data-set="en" aria-pressed="true">EN</button>
+    </div>
   </div>
 </nav>
 
-<header>
-  <h1>Team Leader SAP</h1>
-  <p>
-    Guido progetti complessi allineando business e tecnologia,
-    con focus su delivery, qualità e risultati misurabili.
+<header class="hero" id="top">
+  <span class="kicker"><span>Clean Core ·</span> <span>SAP BTP ·</span> <span>ABAP Cloud ·</span> <span>RAP ·</span> <span>Fiori ·</span> <span>Integration</span></span>
+  <h1>
+    <span data-l="en">SAP Enterprise &amp; Solution Architect</span>
+    <span data-l="it">Enterprise &amp; Solution Architect SAP</span>
+  </h1>
+  <p class="lead" data-l="en">
+    I turn business requirements into sustainable, scalable SAP solutions,
+    with a clean-core approach and a focus on delivery quality.
   </p>
+  <p class="lead" data-l="it">
+    Trasformo i requisiti di business in soluzioni SAP sostenibili e scalabili,
+    con approccio clean core e attenzione alla qualità delle consegne.
+  </p>
+  <div class="actions">
+    <a class="btn primary" href="#contact"><span data-l="en">Get in touch</span><span data-l="it">Contattami</span></a>
+    <a class="btn secondary" href="https://www.linkedin.com/in/roberto-deieso-41657713/" target="_blank" rel="noopener">LinkedIn</a>
+  </div>
 </header>
 
-<section id="profilo">
-  <h2>Profilo</h2>
-  <p>
-    Team Leader con background tecnico SAP ABAP, specializzato nella gestione
-    di progetti IT complessi in contesti enterprise.
+<section id="about" class="reveal">
+  <h2><span data-l="en">About</span><span data-l="it">Profilo</span></h2>
+  <p data-l="en">
+    Enterprise and Solution Architect with 7+ years of SAP experience, from ABAP development
+    to technical leadership on large-scale projects for major clients such as Acea, RAI,
+    Banca d'Italia, ENEL and SIAE.
+  </p>
+  <p data-l="en">
+    I design SAP architectures and integration solutions, coordinate technical and functional
+    teams and work with stakeholders from requirements to go-live.
+  </p>
+  <p data-l="it">
+    Enterprise e Solution Architect con oltre 7 anni di esperienza SAP, dallo sviluppo ABAP
+    alla leadership tecnica su progetti di grandi dimensioni per clienti come Acea, RAI,
+    Banca d'Italia, ENEL e SIAE.
+  </p>
+  <p data-l="it">
+    Progetto architetture SAP e soluzioni di integrazione, coordino team tecnici e funzionali
+    e lavoro con gli stakeholder dal requisito al go-live.
   </p>
 </section>
 
-<section id="progetti">
-  <h2>Progetti chiave</h2>
-
-  <div class="card">
-    <h3>Progetti SAP core</h3>
-    <p>Gestione end-to-end di delivery, budget e team cross-funzionali.</p>
+<section id="focus" class="reveal">
+  <h2><span data-l="en">Focus areas</span><span data-l="it">Ambiti</span></h2>
+  <div class="grid">
+    <div class="card">
+      <h3><span data-l="en">SAP enterprise architecture</span><span data-l="it">Architettura enterprise SAP</span></h3>
+      <p data-l="en">Architectural vision for SAP landscapes, aligned with business priorities.</p>
+      <p data-l="it">Visione architetturale dei sistemi SAP, allineata alle priorità di business.</p>
+    </div>
+    <div class="card">
+      <h3>Solution design</h3>
+      <p data-l="en">From business requirements to sustainable, scalable technical solutions.</p>
+      <p data-l="it">Dai requisiti di business a soluzioni tecniche sostenibili e scalabili.</p>
+    </div>
+    <div class="card">
+      <h3><span data-l="en">Integration &amp; APIs</span><span data-l="it">Integrazioni e API</span></h3>
+      <p data-l="en">SAP and non-SAP integrations with SAP Integration Suite, OData and REST APIs.</p>
+      <p data-l="it">Integrazioni SAP e non-SAP con SAP Integration Suite, OData e API REST.</p>
+    </div>
+    <div class="card">
+      <h3><span data-l="en">Clean-core extensions</span><span data-l="it">Estensioni clean core</span></h3>
+      <p data-l="en">Extensions built on ABAP Cloud, RAP, CAP and Fiori, keeping the core upgrade-ready.</p>
+      <p data-l="it">Estensioni su ABAP Cloud, RAP, CAP e Fiori, mantenendo il core pronto agli aggiornamenti.</p>
+    </div>
+    <div class="card">
+      <h3><span data-l="en">Technical governance</span><span data-l="it">Governance tecnica</span></h3>
+      <p data-l="en">Priorities, risks and delivery quality, with clear visibility for stakeholders.</p>
+      <p data-l="it">Priorità, rischi e qualità delle consegne, con visibilità chiara per gli stakeholder.</p>
+    </div>
+    <div class="card">
+      <h3><span data-l="en">Team leadership</span><span data-l="it">Guida dei team</span></h3>
+      <p data-l="en">Coordinating technical and functional teams from requirements to go-live.</p>
+      <p data-l="it">Coordinamento di team tecnici e funzionali, dal requisito al go-live.</p>
+    </div>
   </div>
-
-  <div class="card">
-    <h3>Workzone</h3>
-    <p>Coordinamento tecnico e funzionale con gestione rischi e priorità.</p>
-  </div>
-
-  <div class="card">
-    <h3>Soluzioni multi-modulo</h3>
-    <p>Implementazioni SAP HR, FI, MM, PM con ottimizzazione processi.</p>
-  </div>
-
 </section>
 
-<section id="metodo">
-  <h2>Il mio lavoro</h2>
+<section id="experience" class="reveal">
+  <h2><span data-l="en">Experience</span><span data-l="it">Esperienza</span></h2>
 
-  <div class="card">
-    <p>
-      Supporto le organizzazioni nella gestione di programmi SAP complessi,
-      garantendo controllo, visibilità e risultati concreti.
+  <div class="role first">
+    <h3>Technical Lead &amp; Solution Architect</h3>
+    <p class="meta">
+      <span data-l="en">Indra Minsait · client Acea · 2022 – present</span>
+      <span data-l="it">Indra Minsait · cliente Acea · 2022 – oggi</span>
     </p>
+    <ul data-l="en">
+      <li>Technical and architectural lead of the Workzone project: priorities, risks, delivery quality and stakeholder alignment.</li>
+      <li>Project management of the client's core SAP project: planning, budget and on-time delivery.</li>
+    </ul>
+    <ul data-l="it">
+      <li>Guida tecnica e architetturale del progetto Workzone: priorità, rischi, qualità delle consegne e allineamento con gli stakeholder.</li>
+      <li>Project management del progetto SAP core del cliente: pianificazione, budget e rispetto dei tempi.</li>
+    </ul>
   </div>
 
-  <div class="card">
-    <p>
-      Coordino team tecnici e stakeholder, traducendo esigenze di business
-      in soluzioni sostenibili e scalabili.
-    </p>
+  <div class="role">
+    <h3>Senior SAP Developer</h3>
+    <p class="meta">Indra Minsait / Cube Consultants · 2019 – 2024</p>
+    <ul data-l="en">
+      <li><strong>RAI</strong> — TV rights: contracts, sales and reporting.</li>
+      <li><strong>SIAE</strong> — matching of incoming payments to invoices (FI).</li>
+      <li><strong>ENEL</strong> — scheduled maintenance (PM).</li>
+      <li><strong>Banca d'Italia, Acea</strong> — HR developments.</li>
+      <li><strong>SIR</strong> — interface between tablets and SAP for warehouse processes (WM/EWM).</li>
+      <li><strong>MIRI</strong> — tool for automated menu change management.</li>
+    </ul>
+    <ul data-l="it">
+      <li><strong>RAI</strong> — diritti televisivi: contratti, vendite e reporting.</li>
+      <li><strong>SIAE</strong> — abbinamento tra incassi e fatture (FI).</li>
+      <li><strong>ENEL</strong> — manutenzione programmata (PM).</li>
+      <li><strong>Banca d'Italia, Acea</strong> — sviluppi in ambito HR.</li>
+      <li><strong>SIR</strong> — interfaccia tra tablet e SAP per i processi di magazzino (WM/EWM).</li>
+      <li><strong>MIRI</strong> — strumento per la gestione automatica dei cambi menu.</li>
+    </ul>
   </div>
-
-  <div class="card">
-    <p>
-      Intervengo nei momenti critici per ridurre rischi e ristabilire
-      allineamento tra IT e business.
-    </p>
-  </div>
-
 </section>
 
-<section id="valore">
-  <h2>Valore che porto</h2>
-
-  <div class="card">
-    <p><span class="highlight">Riduzione del rischio</span> — gestione proattiva delle criticità.</p>
+<section id="certifications" class="reveal">
+  <h2><span data-l="en">Certifications</span><span data-l="it">Certificazioni</span></h2>
+  <div class="certs">
+    <div class="cert"><span>SAP Certified – Enterprise Architect</span><time>2026</time></div>
+    <div class="cert"><span>SAP Certified – Solution Architect – SAP BTP</span><time>2026</time></div>
+    <div class="cert"><span>PRINCE2 Foundation</span><time>2026</time></div>
+    <div class="cert"><span>SAP Certified – Back-End Developer – ABAP Cloud</span><time>2024</time></div>
+    <div class="cert"><span>SAP Certified – Back-End Developer – SAP CAP</span><time>2024</time></div>
+    <div class="cert"><span>SAP Certified – SAP Integration Suite</span><time>2024</time></div>
+    <div class="cert"><span>SAP Certified – SAP Fiori Application Developer</span><time>2023</time></div>
+    <div class="cert"><span>ITIL 4 Foundation</span><time>2023</time></div>
   </div>
-
-  <div class="card">
-    <p><span class="highlight">Delivery affidabile</span> — rispetto di tempi, costi e qualità.</p>
-  </div>
-
-  <div class="card">
-    <p><span class="highlight">Allineamento business-IT</span> — decisioni orientate all’impatto.</p>
-  </div>
-
-  <div class="card">
-    <p><span class="highlight">Governance</span> — visibilità su avanzamento e priorità.</p>
-  </div>
-
-</section>
-
-<section id="certificazioni">
-  <h2>Certificazioni</h2>
-
-  <div class="card">
-    <p><strong>SAP Certified (Enterprise Architect, Fiori, Integration, ABAP Cloud, CAP,)</strong></p>
-  </div>
-
-  <div class="card">
-    <p><strong>ITIL Foundation</strong></p>
-  </div>
-
-
-</section>
-
-<section id="contatti">
-  <h2>Contatti</h2>
-
-  <p>📱 331 7330979</p>
-
-  <p>
-    <a href="https://www.linkedin.com/in/roberto-de-ieso-41657713/" target="_blank">
-      LinkedIn
+  <p class="more">
+    <a href="https://www.credly.com/users/roberto-de-ieso" target="_blank" rel="noopener">
+      <span data-l="en">Verify on Credly →</span><span data-l="it">Verifica su Credly →</span>
     </a>
   </p>
+</section>
 
-  <p>
-    <a href="https://www.credly.com/users/roberto-de-ieso" target="_blank">
-      Credly
-    </a>
-  </p>
-
-  <a href="tel:3317330979" class="cta">Contattami</a>
+<section id="contact" class="reveal">
+  <h2><span data-l="en">Contact</span><span data-l="it">Contatti</span></h2>
+  <p data-l="en">Happy to connect and talk about SAP architecture, integration and clean core.</p>
+  <p data-l="it">Sono disponibile per un confronto su architetture SAP, integrazioni e clean core.</p>
+  <ul class="contact-list">
+    <li><span class="label">Email</span><a href="mailto:roberto.deieso84@gmail.com">roberto.deieso84@gmail.com</a></li>
+    <li><span class="label"><span data-l="en">Phone</span><span data-l="it">Telefono</span></span><a href="tel:+393317330979">+39 331 733 0979</a></li>
+    <li><span class="label">LinkedIn</span><a href="https://www.linkedin.com/in/roberto-deieso-41657713/" target="_blank" rel="noopener">linkedin.com/in/roberto-deieso-41657713</a></li>
+    <li><span class="label">Credly</span><a href="https://www.credly.com/users/roberto-de-ieso" target="_blank" rel="noopener">credly.com/users/roberto-de-ieso</a></li>
+  </ul>
+  <a class="btn primary" href="mailto:roberto.deieso84@gmail.com"><span data-l="en">Write to me</span><span data-l="it">Scrivimi</span></a>
 </section>
 
 <footer>
   <p>© 2026 Roberto De Ieso</p>
 </footer>
 
-<a href="tel:3317330979" class="call-btn">📞</a>
+<a href="tel:+393317330979" class="call-btn" aria-label="Call / Chiama">📞</a>
 
 <script>
-  const sections = document.querySelectorAll("section");
+  (function () {
+    var root = document.documentElement;
+    var titles = {
+      en: 'Roberto De Ieso | SAP Enterprise & Solution Architect',
+      it: 'Roberto De Ieso | Enterprise & Solution Architect SAP'
+    };
+    var buttons = document.querySelectorAll('.lang button');
 
-  window.addEventListener("scroll", () => {
-    const trigger = window.innerHeight * 0.85;
-
-    sections.forEach(sec => {
-      const top = sec.getBoundingClientRect().top;
-      if (top < trigger) {
-        sec.classList.add("show");
+    function setLang(lang, save) {
+      root.setAttribute('data-lang', lang);
+      root.setAttribute('lang', lang);
+      document.title = titles[lang];
+      buttons.forEach(function (b) {
+        b.setAttribute('aria-pressed', String(b.getAttribute('data-set') === lang));
+      });
+      if (save) {
+        try { localStorage.setItem('lang', lang); } catch (e) {}
       }
+    }
+
+    setLang(root.getAttribute('data-lang') === 'it' ? 'it' : 'en', false);
+
+    buttons.forEach(function (b) {
+      b.addEventListener('click', function () { setLang(b.getAttribute('data-set'), true); });
     });
-  });
+
+    var items = document.querySelectorAll('.reveal');
+    if ('IntersectionObserver' in window) {
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('show');
+            io.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.1 });
+      items.forEach(function (el) { io.observe(el); });
+    } else {
+      items.forEach(function (el) { el.classList.add('show'); });
+    }
+  })();
 </script>
 
 </body>
